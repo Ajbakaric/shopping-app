@@ -1,0 +1,12 @@
+/* src/components/Navbar.module.css */
+@media (max-width: 600px) {
+    .navbar ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .navbar a {
+      font-size: 16px;
+    }
+  }
+  

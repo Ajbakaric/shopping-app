@@ -1,0 +1,25 @@
+/* src/pages/Home.module.css */
+.homeContainer {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #eef2f3;
+  }
+  
+  .homeHeader {
+    font-size: 36px;
+    color: #333;
+  }
+  
+  .homeText {
+    font-size: 18px;
+    color: #555;
+    margin: 20px 0;
+  }
+  
+  .homeImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
