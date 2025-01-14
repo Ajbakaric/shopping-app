@@ -16,7 +16,7 @@ function Navbar() {
         <li><Link to="/shop">Shop</Link></li>
         <li>
           <Link to="/shop">
-            🛒 Cart <span className={styles.cartBadge}>{totalItems}</span>
+            🛒 Cart ({totalItems}) {/* Added parentheses */}
           </Link>
         </li>
       </ul>

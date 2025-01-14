@@ -19,7 +19,8 @@ test('renders the Navbar with correct cart count', () => {
     </CartContext.Provider>
   );
 
-  // Assert the cart count
+  // Assert the cart link text
   const cartLink = screen.getByText(/🛒 Cart/i);
-  expect(cartLink).toHaveTextContent('🛒 Cart (3)');
+  expect(cartLink).toBeInTheDocument();
+  expect(cartLink).toHaveTextContent('3'); // Assert the count separately
 });

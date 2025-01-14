@@ -8,22 +8,17 @@ function Shop() {
   const { addToCart } = useContext(CartContext);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null); // Add error state
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error('Failed to fetch products. Please try again later.');
-        }
-        return res.json();
-      })
+      .then((res) => res.json())
       .then((data) => {
         setProducts(data);
         setLoading(false);
       })
-      .catch((err) => {
-        setError(err.message);
+      .catch(() => {
+        setError(true);
         setLoading(false);
       });
   }, []);
@@ -40,7 +35,7 @@ function Shop() {
     return (
       <div className={styles.errorMessage}>
         <h2>Oops!</h2>
-        <p>{error}</p>
+        <p>Failed to fetch products. Please try again later.</p>
       </div>
     );
   }
